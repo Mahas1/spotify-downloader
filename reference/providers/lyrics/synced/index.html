@@ -2366,13 +2366,13 @@ Currently supported websites: Deezer, NetEase</p>
         <span class="c1"># Max retries reached</span>
         <span class="k">return</span> <span class="kc">None</span>
     <span class="k">except</span> <span class="ne">TypeError</span><span class="p">:</span>
-        <span class="c1"># Error at syncedlyrics.providers.musixmatch L89 - Because `body` is occasionally an empty list</span>
-        <span class="c1"># instead of a dictionary.</span>
-        <span class="c1"># We get this error when allow_plain_format is set to True, and there are no synced lyrics present</span>
+        <span class="c1"># Error at syncedlyrics.providers.musixmatch L89 -</span>
+        <span class="c1">#   Because `body` is occasionally an empty list instead of a dictionary.</span>
+        <span class="c1"># We get this error when allow_plain_format is set to True,</span>
+        <span class="c1">#   and there are no synced lyrics present</span>
         <span class="c1"># Because its empty, we know there are no lyrics</span>
         <span class="k">return</span> <span class="kc">None</span>
-    <span class="k">except</span><span class="p">:</span>
-        <span class="c1"># Potential unhandled exceptions caused by syncedlyrics</span>
+    <span class="k">finally</span><span class="p">:</span>
         <span class="k">return</span> <span class="kc">None</span>
 </code></pre></div></td></tr></table></div>
           </details>
